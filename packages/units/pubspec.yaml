@@ -1,7 +1,7 @@
 name: units
 description: Unit Conversion.
 version: 0.0.1
-repository: https://github.com/andreypudov/metar/packages/units
+repository: https://github.com/andreypudov/metar/tree/master/packages/units
 
 environment:
   sdk: '>=3.1.5 <4.0.0'

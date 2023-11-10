@@ -1,7 +1,7 @@
 name: metar
 description: METAR Aviation Weather Observation.
 version: 0.0.1
-repository: https://github.com/andreypudov/metar/packages/metar
+repository: https://github.com/andreypudov/metar/tree/master/packages/metar
 
 environment:
   sdk: '>=3.1.5 <4.0.0'

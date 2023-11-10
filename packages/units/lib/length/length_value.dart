@@ -1,12 +1,15 @@
-import 'package:units/length/centimeter.dart';
-import 'package:units/length/length_units.dart';
-import 'package:units/length/meter.dart';
+import 'foot.dart';
+import 'inch.dart';
+import 'length_units.dart';
+import 'meter.dart';
+import 'nautical_mile.dart';
+import 'statue_mile.dart';
+import 'yard.dart';
 
 abstract class LengthValue {
   final double value;
-  final LengthUnit unit;
 
-  LengthValue(this.value, this.unit);
+  LengthValue(this.value);
 
   factory LengthValue.from(LengthUnit unit, double value) {
     if (value < 0) {
@@ -14,8 +17,12 @@ abstract class LengthValue {
     }
 
     return switch (unit) {
+      LengthUnit.foot => Foot(value),
+      LengthUnit.inch => Inch(value),
       LengthUnit.meter => Meter(value),
-      LengthUnit.centimeter => Centimeter(value)
+      LengthUnit.nauticalMile => NauticalMile(value),
+      LengthUnit.statueMile => StatueMile(value),
+      LengthUnit.yard => Yard(value),
     };
   }
 

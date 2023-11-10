@@ -1,10 +1,8 @@
 enum LengthUnit {
-  meter,
-  centimeter,
-/*  millimeter,
-  kilometer,
   foot,
   inch,
+  meter,
+  nauticalMile,
+  statueMile,
   yard,
-  mile,*/
 }
