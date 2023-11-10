@@ -18,6 +18,11 @@ to `/example` folder.
 const like = 'sample';
 ```
 
+```dart
+const length = Length(1, LengthUnit.meter);
+const lengthInFeet = length.to(LengthUnit.foot);
+```
+
 ## Additional information
 
 Tell users more about the package: where to find more information, how to
