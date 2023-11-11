@@ -1,4 +1,8 @@
 import '../../frequency_unit.dart';
+import 'gigahertz.dart';
+import 'hertz.dart';
+import 'kilohertz.dart';
+import 'megahertz.dart';
 
 abstract class FrequencyValue {
   final double value;
