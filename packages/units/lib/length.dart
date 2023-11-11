@@ -1,5 +1,5 @@
-import 'package:units/length/length_units.dart';
-import 'package:units/length/length_value.dart';
+import 'length_units.dart';
+import 'src/length/length_value.dart';
 
 class Length {
   LengthValue value;

@@ -1,6 +1,6 @@
+import '../../length_units.dart';
 import 'foot.dart';
 import 'inch.dart';
-import 'length_units.dart';
 import 'meter.dart';
 import 'nautical_mile.dart';
 import 'statue_mile.dart';
