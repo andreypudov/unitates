@@ -1,4 +1,4 @@
-import 'mass_units.dart';
+import 'mass_unit.dart';
 import 'src/mass/mass_value.dart';
 
 class Mass {

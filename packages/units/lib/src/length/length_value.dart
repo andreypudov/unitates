@@ -13,12 +13,17 @@ abstract class LengthValue {
 
   factory LengthValue.from(LengthUnit unit, double value) {
     return switch (unit) {
-      LengthUnit.foot => Foot(value),
-      LengthUnit.inch => Inch(value),
+      LengthUnit.kilometer => Kilometer(value),
       LengthUnit.meter => Meter(value),
-      LengthUnit.nauticalMile => NauticalMile(value),
+      LengthUnit.centimeter => Centimeter(value),
+      LengthUnit.millimeter => Millimeter(value),
+      LengthUnit.micrometer => Micrometer(value),
+      LengthUnit.nanometer => Nanometer(value),
       LengthUnit.statueMile => StatueMile(value),
       LengthUnit.yard => Yard(value),
+      LengthUnit.foot => Foot(value),
+      LengthUnit.inch => Inch(value),
+      LengthUnit.nauticalMile => NauticalMile(value),
     };
   }
 

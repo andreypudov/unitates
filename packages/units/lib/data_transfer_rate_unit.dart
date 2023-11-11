@@ -1,0 +1,15 @@
+enum DataTransferRateUnit {
+  bitPerSecond,
+  kilobitPerSecond,
+  kilobytePerSecond,
+  kibibitPerSecond,
+  megabitPerSecond,
+  megabytePerSecond,
+  mebibitPerSecond,
+  gigabitPerSecond,
+  gigabytePerSecond,
+  gibibitPerSecond,
+  terabitPerSecond,
+  terabytePerSecond,
+  tebibitPerSecond,
+}

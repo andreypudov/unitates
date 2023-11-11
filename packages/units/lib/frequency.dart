@@ -5,7 +5,7 @@ class Frequency {
   FrequencyValue value;
 
   Frequency(double frequency, FrequencyUnit unit):
-        value = LengthValue.from(unit, frequency);
+        value = FrequencyValue.from(unit, frequency);
 
   to(FrequencyUnit unit) => value.to(unit);
 }
