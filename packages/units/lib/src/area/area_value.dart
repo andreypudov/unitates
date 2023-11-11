@@ -1,4 +1,13 @@
 import '../../area_unit.dart';
+import 'acre.dart';
+import 'area_value.dart';
+import 'hectare.dart';
+import 'square_foot.dart';
+import 'square_inch.dart';
+import 'square_kilometer.dart';
+import 'square_meter.dart';
+import 'square_mile.dart';
+import 'square_yard.dart';
 
 abstract class AreaValue {
   final double value;
