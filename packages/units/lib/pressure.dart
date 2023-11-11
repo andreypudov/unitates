@@ -1,5 +1,11 @@
-class Pressure {
-  double pressure;
+import 'pressure_unit.dart';
+import 'src/pressure/pressure_value.dart';
 
-  Pressure(this.pressure);
+class Pressure {
+  PressureValue value;
+
+  Pressure(double pressure, PressureUnit unit):
+        value = PressureValue.from(unit, pressure);
+
+  to(PressureUnit unit) => value.to(unit);
 }

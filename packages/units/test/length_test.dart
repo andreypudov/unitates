@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:units/length.dart';
-import 'package:units/length_units.dart';
+import 'package:units/length_unit.dart';
 
 void main() {
   group("length should converts correctly", () {

@@ -1,5 +1,11 @@
-class Mass {
-  final int mass;
+import 'mass_units.dart';
+import 'src/mass/mass_value.dart';
 
-  Mass(this.mass);
+class Mass {
+  MassValue value;
+
+  Mass(double mass, MassUnit unit):
+        value = MassValue.from(unit, mass);
+
+  to(MassUnit unit) => value.to(unit);
 }

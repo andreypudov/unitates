@@ -1,4 +1,4 @@
-import '../../length_units.dart';
+import '../../length_unit.dart';
 import 'foot.dart';
 import 'inch.dart';
 import 'meter.dart';
@@ -12,10 +12,6 @@ abstract class LengthValue {
   LengthValue(this.value);
 
   factory LengthValue.from(LengthUnit unit, double value) {
-    if (value < 0) {
-      throw ArgumentError('Distance cannot be negative');
-    }
-
     return switch (unit) {
       LengthUnit.foot => Foot(value),
       LengthUnit.inch => Inch(value),
