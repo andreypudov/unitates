@@ -1,4 +1,9 @@
 import '../../speed_unit.dart';
+import 'foot_per_second.dart';
+import 'kilometer_per_hour.dart';
+import 'knot.dart';
+import 'meter_per_second.dart';
+import 'mile_per_hour.dart';
 
 abstract class SpeedValue {
   final double value;
