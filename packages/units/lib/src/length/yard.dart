@@ -17,7 +17,7 @@ class Yard extends LengthValue {
   @override
   LengthValue to(LengthUnit unit) =>
       switch(unit) {
-        LengthUnit.kilometer => Kilometer(value / 1094),
+        LengthUnit.kilometer => Kilometer(value * 0.0009144),
         LengthUnit.meter => Meter(value * 0.9144),
         LengthUnit.centimeter => Centimeter(value * 91.44),
         LengthUnit.millimeter => Millimeter(value * 914.4),
