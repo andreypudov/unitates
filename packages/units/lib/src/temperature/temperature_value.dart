@@ -17,4 +17,7 @@ abstract class TemperatureValue {
   }
 
   TemperatureValue to(TemperatureUnit unit);
+
+  @override
+  toString() => value.toString();
 }

@@ -19,4 +19,7 @@ abstract class FuelEconomyValue {
   }
 
   FuelEconomyValue to(FuelEconomyUnit unit);
+
+  @override
+  toString() => value.toString();
 }

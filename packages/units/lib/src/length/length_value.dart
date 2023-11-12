@@ -33,4 +33,7 @@ abstract class LengthValue {
   }
 
   LengthValue to(LengthUnit unit);
+
+  @override
+  toString() => value.toString();
 }

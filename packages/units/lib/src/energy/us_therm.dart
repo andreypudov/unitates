@@ -27,4 +27,7 @@ class UsTherm extends EnergyValue {
         EnergyUnit.usTherm => UsTherm(value),
         EnergyUnit.footPound => FootPound(value),
       };
+
+  @override
+  toString() => '${super.toString()} therm';
 }

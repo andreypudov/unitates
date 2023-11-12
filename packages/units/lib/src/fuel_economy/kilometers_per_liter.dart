@@ -15,4 +15,7 @@ class KilometersPerLiter extends FuelEconomyValue {
         FuelEconomyUnit.kilometersPerLiter => KilometersPerLiter(value),
         FuelEconomyUnit.litersPer100Kilometers => LitersPer100Kilometers(value),
       };
+
+  @override
+  toString() => '${super.toString()} km/L';
 }

@@ -31,4 +31,7 @@ class Second extends TimeValue {
         TimeUnit.decade => Decade(value),
         TimeUnit.century => Century(value),
       };
+
+  @override
+  toString() => '${super.toString()} second';
 }

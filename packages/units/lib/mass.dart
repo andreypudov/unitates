@@ -8,4 +8,7 @@ class Mass {
         value = MassValue.from(unit, mass);
 
   to(MassUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

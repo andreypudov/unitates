@@ -51,4 +51,7 @@ class Gibibyte extends DigitalStorageValue {
         DigitalStorageUnit.petabyte => Petabyte(value),
         DigitalStorageUnit.pebibyte => Pebibyte(value),
       };
+
+  @override
+  toString() => '${super.toString()} GiB';
 }

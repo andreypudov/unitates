@@ -33,4 +33,7 @@ class MegabytePerSecond extends DataTransferRateValue {
         DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value),
         DataTransferRateUnit.tebibitPerSecond => TebibitPerSecond(value),
       };
+
+  @override
+  toString() => '${super.toString()} MB/s';
 }

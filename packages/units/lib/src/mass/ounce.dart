@@ -27,4 +27,7 @@ class Ounce extends MassValue {
         MassUnit.pound => Pound(value),
         MassUnit.ounce => Ounce(value),
       };
+
+  @override
+  toString() => '${super.toString()} oz';
 }

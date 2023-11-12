@@ -21,4 +21,7 @@ abstract class SpeedValue {
   }
 
   SpeedValue to(SpeedUnit unit);
+
+  @override
+  toString() => value.toString();
 }

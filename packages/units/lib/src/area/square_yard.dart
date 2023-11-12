@@ -23,4 +23,7 @@ class SquareYard extends AreaValue {
         AreaUnit.hectare => Hectare(value),
         AreaUnit.acre => Acre(value),
       };
+
+  @override
+  toString() => '${super.toString()} yd²';
 }

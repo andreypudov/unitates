@@ -8,4 +8,7 @@ class PlaneAngle {
         value = PlaneAngleValue.from(unit, planeAngle);
 
   to(PlaneAngleUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

@@ -27,4 +27,7 @@ class Stone extends MassValue {
         MassUnit.pound => Pound(value),
         MassUnit.ounce => Ounce(value),
       };
+
+  @override
+  toString() => '${super.toString()} st';
 }

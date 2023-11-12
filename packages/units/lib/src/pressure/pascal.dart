@@ -17,4 +17,7 @@ class Pascal extends PressureValue {
         PressureUnit.standardAtmosphere => StandardAtmosphere(value),
         PressureUnit.torr => Torr(value),
       };
+
+  @override
+  toString() => '${super.toString()} Pa';
 }

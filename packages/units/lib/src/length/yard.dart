@@ -17,16 +17,19 @@ class Yard extends LengthValue {
   @override
   LengthValue to(LengthUnit unit) =>
       switch(unit) {
-        LengthUnit.kilometer => Kilometer(value),
+        LengthUnit.kilometer => Kilometer(value / 1094),
         LengthUnit.meter => Meter(value * 0.9144),
-        LengthUnit.centimeter => Centimeter(value),
-        LengthUnit.millimeter => Millimeter(value),
-        LengthUnit.micrometer => Micrometer(value),
-        LengthUnit.nanometer => Nanometer(value),
+        LengthUnit.centimeter => Centimeter(value * 91.44),
+        LengthUnit.millimeter => Millimeter(value * 914.4),
+        LengthUnit.micrometer => Micrometer(value * 914400),
+        LengthUnit.nanometer => Nanometer(value * 914400000),
         LengthUnit.statueMile => StatueMile(value / 1760),
         LengthUnit.yard => Yard(value),
         LengthUnit.foot => Foot(value * 3),
         LengthUnit.inch => Inch(value * 36),
         LengthUnit.nauticalMile => NauticalMile(value / 2025.37),
       };
+
+  @override
+  toString() => '${super.toString()} yd';
 }

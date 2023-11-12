@@ -8,4 +8,7 @@ class DataTransferRate {
         value = DataTransferRateValue.from(unit, dataTransferRate);
 
   to(DataTransferRateUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

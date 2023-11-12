@@ -17,16 +17,19 @@ class Millimeter extends LengthValue {
   @override
   LengthValue to(LengthUnit unit) =>
       switch(unit) {
-        LengthUnit.kilometer => Kilometer(value),
-        LengthUnit.meter => Meter(value),
-        LengthUnit.centimeter => Centimeter(value),
+        LengthUnit.kilometer => Kilometer(value / 1000000),
+        LengthUnit.meter => Meter(value / 1000),
+        LengthUnit.centimeter => Centimeter(value / 10),
         LengthUnit.millimeter => Millimeter(value),
-        LengthUnit.micrometer => Micrometer(value),
-        LengthUnit.nanometer => Nanometer(value),
-        LengthUnit.statueMile => StatueMile(value),
-        LengthUnit.yard => Yard(value),
-        LengthUnit.foot => Foot(value),
-        LengthUnit.inch => Inch(value),
-        LengthUnit.nauticalMile => NauticalMile(value),
+        LengthUnit.micrometer => Micrometer(value * 1000),
+        LengthUnit.nanometer => Nanometer(value * 1000000),
+        LengthUnit.statueMile => StatueMile(value / 1609344),
+        LengthUnit.yard => Yard(value / 914.4),
+        LengthUnit.foot => Foot(value / 304.8),
+        LengthUnit.inch => Inch(value / 25.4),
+        LengthUnit.nauticalMile => NauticalMile(value / 1852000),
       };
+
+  @override
+  toString() => '${super.toString()} mm';
 }

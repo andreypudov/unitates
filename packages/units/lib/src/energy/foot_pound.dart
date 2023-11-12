@@ -27,4 +27,7 @@ class FootPound extends EnergyValue {
         EnergyUnit.usTherm => UsTherm(value),
         EnergyUnit.footPound => FootPound(value),
       };
+
+  @override
+  toString() => '${super.toString()} ft·lb';
 }

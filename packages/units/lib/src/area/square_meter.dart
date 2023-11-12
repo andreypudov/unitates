@@ -23,4 +23,7 @@ class SquareMeter extends AreaValue {
         AreaUnit.hectare => Hectare(value),
         AreaUnit.acre => Acre(value),
       };
+
+  @override
+  toString() => '${super.toString()} m²';
 }

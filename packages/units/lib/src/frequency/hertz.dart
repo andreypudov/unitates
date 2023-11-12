@@ -15,4 +15,7 @@ class Hertz extends FrequencyValue {
         FrequencyUnit.megahertz => Megahertz(value),
         FrequencyUnit.gigahertz => Gigahertz(value),
       };
+
+  @override
+  toString() => '${super.toString()} Hz';
 }

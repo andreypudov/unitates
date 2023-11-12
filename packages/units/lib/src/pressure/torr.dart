@@ -17,4 +17,7 @@ class Torr extends PressureValue {
         PressureUnit.standardAtmosphere => StandardAtmosphere(value),
         PressureUnit.torr => Torr(value),
       };
+
+  @override
+  toString() => '${super.toString()} torr';
 }

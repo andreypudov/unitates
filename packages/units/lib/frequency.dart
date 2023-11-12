@@ -8,4 +8,7 @@ class Frequency {
         value = FrequencyValue.from(unit, frequency);
 
   to(FrequencyUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

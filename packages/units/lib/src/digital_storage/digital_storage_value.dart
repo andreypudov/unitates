@@ -55,4 +55,7 @@ abstract class DigitalStorageValue {
   }
 
   DigitalStorageValue to(DigitalStorageUnit unit);
+
+  @override
+  toString() => value.toString();
 }

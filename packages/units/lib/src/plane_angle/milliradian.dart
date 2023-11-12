@@ -19,4 +19,7 @@ class Milliradian extends PlaneAngleValue {
         PlaneAngleUnit.minuteOfArc => MinuteOfArc(value),
         PlaneAngleUnit.radian => Radian(value),
       };
+
+  @override
+  toString() => '${super.toString()} mrad';
 }

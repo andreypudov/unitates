@@ -23,4 +23,7 @@ class Acre extends AreaValue {
         AreaUnit.hectare => Hectare(value),
         AreaUnit.acre => Acre(value),
       };
+
+  @override
+  toString() => '${super.toString()} ac';
 }

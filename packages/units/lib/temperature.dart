@@ -8,4 +8,7 @@ class Temperature {
         value = TemperatureValue.from(unit, temperature);
 
   to(TemperatureUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

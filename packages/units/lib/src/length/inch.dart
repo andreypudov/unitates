@@ -17,16 +17,19 @@ class Inch extends LengthValue {
   @override
   LengthValue to(LengthUnit unit) =>
       switch(unit) {
-        LengthUnit.kilometer => Kilometer(value),
+        LengthUnit.kilometer => Kilometer(value / 39370.1),
         LengthUnit.meter => Meter(value * 0.0254),
-        LengthUnit.centimeter => Centimeter(value),
-        LengthUnit.millimeter => Millimeter(value),
-        LengthUnit.micrometer => Micrometer(value),
-        LengthUnit.nanometer => Nanometer(value),
+        LengthUnit.centimeter => Centimeter(value * 2.54),
+        LengthUnit.millimeter => Millimeter(value * 25.4),
+        LengthUnit.micrometer => Micrometer(value * 25400),
+        LengthUnit.nanometer => Nanometer(value * 25400000),
         LengthUnit.statueMile => StatueMile(value / 63360),
         LengthUnit.yard => Yard(value / 36),
         LengthUnit.foot => Foot(value / 12),
         LengthUnit.inch => Inch(value),
         LengthUnit.nauticalMile => NauticalMile(value / 72913.4),
       };
+
+  @override
+  toString() => '${super.toString()} in';
 }

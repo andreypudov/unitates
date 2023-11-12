@@ -13,4 +13,7 @@ class Fahrenheit extends TemperatureValue {
         TemperatureUnit.fahrenheit => Fahrenheit(value),
         TemperatureUnit.kelvin => Kelvin(value),
       };
+
+  @override
+  toString() => '${super.toString()} °F';
 }

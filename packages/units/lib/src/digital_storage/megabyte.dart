@@ -51,4 +51,7 @@ class Megabyte extends DigitalStorageValue {
         DigitalStorageUnit.petabyte => Petabyte(value),
         DigitalStorageUnit.pebibyte => Pebibyte(value),
       };
+
+  @override
+  toString() => '${super.toString()} MB';
 }

@@ -21,4 +21,7 @@ abstract class PressureValue {
   }
 
   PressureValue to(PressureUnit unit);
+
+  @override
+  toString() => value.toString();
 }

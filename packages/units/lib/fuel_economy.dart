@@ -8,4 +8,7 @@ class FuelEconomy {
         value = FuelEconomyValue.from(unit, fuelEconomy);
 
   to(FuelEconomyUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

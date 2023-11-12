@@ -17,16 +17,19 @@ class NauticalMile extends LengthValue {
   @override
   LengthValue to(LengthUnit unit) =>
       switch(unit) {
-        LengthUnit.kilometer => Kilometer(value),
+        LengthUnit.kilometer => Kilometer(value * 1.852),
         LengthUnit.meter => Meter(value * 1852),
-        LengthUnit.centimeter => Centimeter(value),
-        LengthUnit.millimeter => Millimeter(value),
-        LengthUnit.micrometer => Micrometer(value),
-        LengthUnit.nanometer => Nanometer(value),
+        LengthUnit.centimeter => Centimeter(value * 185200),
+        LengthUnit.millimeter => Millimeter(value * 1852000),
+        LengthUnit.micrometer => Micrometer(value * 1852000000),
+        LengthUnit.nanometer => Nanometer(value * 1852000000000),
         LengthUnit.statueMile => StatueMile(value * 1.15078),
         LengthUnit.yard => Yard(value * 2025.37),
         LengthUnit.foot => Foot(value * 6076.12),
         LengthUnit.inch => Inch(value * 72913.4),
         LengthUnit.nauticalMile => NauticalMile(value),
       };
+
+  @override
+  toString() => '${super.toString()} nmi';
 }

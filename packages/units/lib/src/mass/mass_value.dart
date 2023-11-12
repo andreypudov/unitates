@@ -31,4 +31,7 @@ abstract class MassValue {
   }
 
   MassValue to(MassUnit unit);
+
+  @override
+  toString() => value.toString();
 }

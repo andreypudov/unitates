@@ -8,4 +8,7 @@ class Pressure {
         value = PressureValue.from(unit, pressure);
 
   to(PressureUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

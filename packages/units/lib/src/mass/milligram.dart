@@ -27,4 +27,7 @@ class Milligram extends MassValue {
         MassUnit.pound => Pound(value),
         MassUnit.ounce => Ounce(value),
       };
+
+  @override
+  toString() => '${super.toString()} mg';
 }

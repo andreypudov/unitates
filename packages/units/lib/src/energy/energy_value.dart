@@ -31,4 +31,7 @@ abstract class EnergyValue {
   }
 
   EnergyValue to(EnergyUnit unit);
+
+  @override
+  toString() => value.toString();
 }

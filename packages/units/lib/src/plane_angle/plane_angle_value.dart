@@ -23,4 +23,7 @@ abstract class PlaneAngleValue {
   }
 
   PlaneAngleValue to(PlaneAngleUnit unit);
+
+  @override
+  toString() => value.toString();
 }

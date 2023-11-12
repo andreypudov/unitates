@@ -8,4 +8,7 @@ class Volume {
         value = VolumeValue.from(unit, volume);
 
   to(VolumeUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

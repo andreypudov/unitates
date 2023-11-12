@@ -8,4 +8,7 @@ class Speed {
         value = SpeedValue.from(unit, speed);
 
   to(SpeedUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

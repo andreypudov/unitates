@@ -8,4 +8,7 @@ class DigitalStorage {
         value = DigitalStorageValue.from(unit, digitalStorage);
 
   to(DigitalStorageUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

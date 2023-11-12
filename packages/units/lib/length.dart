@@ -8,4 +8,7 @@ class Length {
         value = LengthValue.from(unit, distance);
 
   to(LengthUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

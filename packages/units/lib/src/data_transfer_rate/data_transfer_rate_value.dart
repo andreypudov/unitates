@@ -37,4 +37,7 @@ abstract class DataTransferRateValue {
   }
 
   DataTransferRateValue to(DataTransferRateUnit unit);
+
+  @override
+  toString() => value.toString();
 }

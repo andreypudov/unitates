@@ -8,4 +8,7 @@ class Time {
         value = TimeValue.from(unit, time);
 
   to(TimeUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

@@ -19,4 +19,7 @@ abstract class FrequencyValue {
   }
 
   FrequencyValue to(FrequencyUnit unit);
+
+  @override
+  toString() => value.toString();
 }

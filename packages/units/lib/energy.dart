@@ -8,4 +8,7 @@ class Energy {
         value = EnergyValue.from(unit, energy);
 
   to(EnergyUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

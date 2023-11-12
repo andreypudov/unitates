@@ -35,4 +35,7 @@ abstract class TimeValue {
   }
 
   TimeValue to(TimeUnit unit);
+
+  @override
+  toString() => value.toString();
 }

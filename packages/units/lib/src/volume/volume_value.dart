@@ -49,4 +49,7 @@ abstract class VolumeValue {
   }
 
   VolumeValue to(VolumeUnit unit);
+
+  @override
+  toString() => value.toString();
 }

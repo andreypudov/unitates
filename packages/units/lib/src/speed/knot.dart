@@ -17,4 +17,7 @@ class Knot extends SpeedValue {
         SpeedUnit.kilometerPerHour => KilometerPerHour(value),
         SpeedUnit.knot => Knot(value),
       };
+
+  @override
+  toString() => '${super.toString()} kn';
 }

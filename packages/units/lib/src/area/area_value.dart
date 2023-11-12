@@ -1,6 +1,5 @@
 import '../../area_unit.dart';
 import 'acre.dart';
-import 'area_value.dart';
 import 'hectare.dart';
 import 'square_foot.dart';
 import 'square_inch.dart';
@@ -28,4 +27,7 @@ abstract class AreaValue {
   }
 
   AreaValue to(AreaUnit unit);
+
+  @override
+  toString() => value.toString();
 }

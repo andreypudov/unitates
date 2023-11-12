@@ -8,4 +8,7 @@ class Area {
         value = AreaValue.from(unit, area);
 
   to(AreaUnit unit) => value.to(unit);
+
+  @override
+  toString() => value.toString();
 }

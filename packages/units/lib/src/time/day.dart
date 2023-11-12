@@ -31,4 +31,7 @@ class Day extends TimeValue {
         TimeUnit.decade => Decade(value),
         TimeUnit.century => Century(value),
       };
+
+  @override
+  toString() => '${super.toString()} day';
 }
