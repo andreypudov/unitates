@@ -1,4 +1,7 @@
 import '../../temperature_unit.dart';
+import 'celsius.dart';
+import 'fahrenheit.dart';
+import 'kelvin.dart';
 
 abstract class TemperatureValue {
   final double value;
