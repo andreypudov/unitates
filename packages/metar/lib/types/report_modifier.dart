@@ -1,3 +1,0 @@
-enum ReportModifier {
-  none, auto
-}

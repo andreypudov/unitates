@@ -1,3 +1,0 @@
-#+title: METAR Aviation Weather Observation
-#+author: Andrey Pudov
-#+date: <2023-04-27 Thu>
