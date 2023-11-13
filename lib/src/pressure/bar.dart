@@ -2,7 +2,7 @@ import '../../pressure_unit.dart';
 import 'pascal.dart';
 import 'pound_per_square_inch.dart';
 import 'pressure_value.dart';
-import 'standardA_atmosphere.dart';
+import 'standard_atmosphere.dart';
 import 'torr.dart';
 
 class Bar extends PressureValue {
