@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter_test/flutter_test.dart';
 
 Matcher lessPreciseOrEquals(double value) {
-  // print("value: $value, epsilon: ${_getEpsilon(value)}, precision: ${_getPrecision(value)}");
   return moreOrLessEquals(value, epsilon: _getEpsilon(value));
 }
 
