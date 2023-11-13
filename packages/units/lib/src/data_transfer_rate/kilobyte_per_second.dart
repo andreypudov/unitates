@@ -19,19 +19,19 @@ class KilobytePerSecond extends DataTransferRateValue {
   @override
   DataTransferRateValue to(DataTransferRateUnit unit) =>
       switch(unit) {
-        DataTransferRateUnit.bitPerSecond => BitPerSecond(value),
-        DataTransferRateUnit.kilobitPerSecond => KilobitPerSecond(value),
+        DataTransferRateUnit.bitPerSecond => BitPerSecond(value * 8000),
+        DataTransferRateUnit.kilobitPerSecond => KilobitPerSecond(value * 8),
         DataTransferRateUnit.kilobytePerSecond => KilobytePerSecond(value),
-        DataTransferRateUnit.kibibitPerSecond => KibibitPerSecond(value),
-        DataTransferRateUnit.megabitPerSecond => MegabitPerSecond(value),
-        DataTransferRateUnit.megabytePerSecond => MegabytePerSecond(value),
-        DataTransferRateUnit.mebibitPerSecond => MebibitPerSecond(value),
-        DataTransferRateUnit.gigabitPerSecond => GigabitPerSecond(value),
-        DataTransferRateUnit.gigabytePerSecond => GigabytePerSecond(value),
-        DataTransferRateUnit.gibibitPerSecond => GibibitPerSecond(value),
-        DataTransferRateUnit.terabitPerSecond => TerabitPerSecond(value),
-        DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value),
-        DataTransferRateUnit.tebibitPerSecond => TebibitPerSecond(value),
+        DataTransferRateUnit.kibibitPerSecond => KibibitPerSecond(value * 7.812),
+        DataTransferRateUnit.megabitPerSecond => MegabitPerSecond(value / 125),
+        DataTransferRateUnit.megabytePerSecond => MegabytePerSecond(value / 1000),
+        DataTransferRateUnit.mebibitPerSecond => MebibitPerSecond(value / 131.1),
+        DataTransferRateUnit.gigabitPerSecond => GigabitPerSecond(value / 1.25e+6),
+        DataTransferRateUnit.gigabytePerSecond => GigabytePerSecond(value / 1e+6),
+        DataTransferRateUnit.gibibitPerSecond => GibibitPerSecond(value / 134200),
+        DataTransferRateUnit.terabitPerSecond => TerabitPerSecond(value / 1.25e+8),
+        DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value / 1e+9),
+        DataTransferRateUnit.tebibitPerSecond => TebibitPerSecond(value / 1.374e+8),
       };
 
   @override

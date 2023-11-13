@@ -1,5 +1,5 @@
 name: units
-description: Unit Conversion.
+description: Unit Conversion Library.
 version: 0.0.1
 repository: https://github.com/andreypudov/metar/tree/master/packages/units
 
