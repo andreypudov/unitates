@@ -14,13 +14,13 @@ class Acre extends AreaValue {
   @override
   AreaValue to(AreaUnit unit) =>
       switch(unit) {
-        AreaUnit.squareKilometer => SquareKilometer(value),
-        AreaUnit.squareMeter => SquareMeter(value),
-        AreaUnit.squareMile => SquareMile(value),
-        AreaUnit.squareYard => SquareYard(value),
-        AreaUnit.squareFoot => SquareFoot(value),
-        AreaUnit.squareInch => SquareInch(value),
-        AreaUnit.hectare => Hectare(value),
+        AreaUnit.squareKilometer => SquareKilometer(value * 0.004046856422),
+        AreaUnit.squareMeter => SquareMeter(value * 4046.856422),
+        AreaUnit.squareMile => SquareMile(value / 640),
+        AreaUnit.squareYard => SquareYard(value * 4840),
+        AreaUnit.squareFoot => SquareFoot(value * 43560),
+        AreaUnit.squareInch => SquareInch(value * 6272640),
+        AreaUnit.hectare => Hectare(value * 0.4046856422),
         AreaUnit.acre => Acre(value),
       };
 

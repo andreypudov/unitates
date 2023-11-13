@@ -14,14 +14,14 @@ class SquareYard extends AreaValue {
   @override
   AreaValue to(AreaUnit unit) =>
       switch(unit) {
-        AreaUnit.squareKilometer => SquareKilometer(value),
-        AreaUnit.squareMeter => SquareMeter(value),
-        AreaUnit.squareMile => SquareMile(value),
+        AreaUnit.squareKilometer => SquareKilometer(value * 8.3612736e-7),
+        AreaUnit.squareMeter => SquareMeter(value * 0.83612736),
+        AreaUnit.squareMile => SquareMile(value * 3.228305785123967e-7),
         AreaUnit.squareYard => SquareYard(value),
-        AreaUnit.squareFoot => SquareFoot(value),
-        AreaUnit.squareInch => SquareInch(value),
-        AreaUnit.hectare => Hectare(value),
-        AreaUnit.acre => Acre(value),
+        AreaUnit.squareFoot => SquareFoot(value * 9),
+        AreaUnit.squareInch => SquareInch(value * 1296),
+        AreaUnit.hectare => Hectare(value * 8.3612736e-5),
+        AreaUnit.acre => Acre(value * 0.0002066115702479339),
       };
 
   @override
