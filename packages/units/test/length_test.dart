@@ -15,7 +15,7 @@ void main() {
       Length(1, LengthUnit.millimeter):   [                  1e-6,     1e-3,     1e-1,        1,       1e+3,          1e+6,     6.21371192237334e-7, 0.0010936132983377078,    0.0032808398950131233,  0.03937007874015748,    5.399568034557235e-7],
       Length(1, LengthUnit.micrometer):   [                  1e-9,     1e-6,     1e-4,     1e-3,          1,          1e+3,    6.21371192237334e-10, 1.0936132983377078e-6, 0.0000032808398950131235, 3.937007874015748e-5,   5.399568034557236e-10],
       Length(1, LengthUnit.nanometer):    [                 1e-12,     1e-9,     1e-7,     1e-6,       1e-3,             1,   6.213711922373339e-13, 1.0936132983377077e-9,    3.2808398950131233e-9, 3.937007874015748e-8,   5.399568034557235e-13],
-      Length(1, LengthUnit.statueMile):   [               1.60934, 1609.344, 160934.4,  1609344, 1609344000, 1609344000000,                       1,                  1760,                     5280,                63360,                0.868976],
+      Length(1, LengthUnit.mile):         [              1.609344, 1609.344, 160934.4,  1609344, 1609344000, 1609344000000,                       1,                  1760,                     5280,                63360,                0.868976],
       Length(1, LengthUnit.yard):         [             0.0009144,   0.9144,    91.44,    914.4,     914400,     914400000,   0.0005681818181818182,                     1,                        3,                   36,   0.0004937369468294682],
       Length(1, LengthUnit.foot):         [ 0.0003047999902464003,   0.3048,    30.48,    304.8,     304800,      3.048e+8,   0.0001893939393939394,    0.3333333333333333,                        1,                   12,  0.00016457871141452112],
       Length(1, LengthUnit.inch):         [0.00002539998628400741,   0.0254,     2.54,     25.4,      25400,      25400000, 0.000015782828282828283,  0.027777777777777776,      0.08333333333333333,                    1, 0.000013714900141812068],
@@ -30,7 +30,7 @@ void main() {
       Length(1, LengthUnit.millimeter):   [                  1e-6,     1e-3,     1e-1,        1,       1e+3,          1e+6,               6.2137e-7,            0.00109361,               0.00328084,            0.0393701,               5.3996e-7],
       Length(1, LengthUnit.micrometer):   [                  1e-9,     1e-6,     1e-4,     1e-3,          1,          1e+3,              6.2137e-10,             1.0936e-6,                3.2808e-6,             3.937e-5,              5.3996e-10],
       Length(1, LengthUnit.nanometer):    [                 1e-12,     1e-9,     1e-7,     1e-6,       1e-3,             1,              6.2137e-13,             1.0936e-9,                3.2808e-9,             3.937e-8,              5.3996e-13],
-      Length(1, LengthUnit.statueMile):   [               1.60934,  1609.34,   160934,  1609344, 1609344000, 1609344000000,                       1,                  1760,                     5280,                63360,                0.868976],
+      Length(1, LengthUnit.mile):         [               1.60934,  1609.34,   160934,  1609344, 1609344000, 1609344000000,                       1,                  1760,                     5280,                63360,                0.868976],
       Length(1, LengthUnit.yard):         [             0.0009144,   0.9144,    91.44,    914.4,     914400,      9.144e+8,             0.000568182,                     1,                        3,                   36,             0.000493737],
       Length(1, LengthUnit.foot):         [             0.0003048,   0.3048,    30.48,    304.8,     304800,      3.048e+8,             0.000189394,              0.333333,                        1,                   12,             0.000164579],
       Length(1, LengthUnit.inch):         [               2.54e-5,   0.0254,     2.54,     25.4,      25400,       2.54e+7,               1.5783e-5,             0.0277778,                0.0833333,                    1,               1.3715e-5],
@@ -50,7 +50,7 @@ void main() {
         expect(actual.to(LengthUnit.millimeter).value, expected[3]);
         expect(actual.to(LengthUnit.micrometer).value, expected[4]);
         expect(actual.to(LengthUnit.nanometer).value, expected[5]);
-        expect(actual.to(LengthUnit.statueMile).value, expected[6]);
+        expect(actual.to(LengthUnit.mile).value, expected[6]);
         expect(actual.to(LengthUnit.yard).value, expected[7]);
         expect(actual.to(LengthUnit.foot).value, expected[8]);
         expect(actual.to(LengthUnit.inch).value, expected[9]);
@@ -66,7 +66,7 @@ void main() {
         expect(actual.to(LengthUnit.millimeter).value, lessPreciseOrEquals(expected[3]));
         expect(actual.to(LengthUnit.micrometer).value, lessPreciseOrEquals(expected[4]));
         expect(actual.to(LengthUnit.nanometer).value, lessPreciseOrEquals(expected[5]));
-        expect(actual.to(LengthUnit.statueMile).value, lessPreciseOrEquals(expected[6]));
+        expect(actual.to(LengthUnit.mile).value, lessPreciseOrEquals(expected[6]));
         expect(actual.to(LengthUnit.yard).value, lessPreciseOrEquals(expected[7]));
         expect(actual.to(LengthUnit.foot).value, lessPreciseOrEquals(expected[8]));
         expect(actual.to(LengthUnit.inch).value, lessPreciseOrEquals(expected[9]));
@@ -81,7 +81,7 @@ void main() {
       expect(Length(1, LengthUnit.millimeter).toString(), "1.0 mm");
       expect(Length(1, LengthUnit.micrometer).toString(), "1.0 µm");
       expect(Length(1, LengthUnit.nanometer).toString(), "1.0 nm");
-      expect(Length(1, LengthUnit.statueMile).toString(), "1.0 mi");
+      expect(Length(1, LengthUnit.mile).toString(), "1.0 mi");
       expect(Length(1, LengthUnit.yard).toString(), "1.0 yd");
       expect(Length(1, LengthUnit.foot).toString(), "1.0 ft");
       expect(Length(1, LengthUnit.inch).toString(), "1.0 in");

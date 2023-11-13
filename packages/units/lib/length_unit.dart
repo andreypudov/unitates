@@ -5,7 +5,7 @@ enum LengthUnit {
   millimeter,
   micrometer,
   nanometer,
-  statueMile,
+  mile,
   yard,
   foot,
   inch,

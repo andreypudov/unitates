@@ -8,7 +8,7 @@ import 'meter.dart';
 import 'micrometer.dart';
 import 'millimeter.dart';
 import 'nanometer.dart';
-import 'statue_mile.dart';
+import 'mile.dart';
 import 'yard.dart';
 
 class NauticalMile extends LengthValue {
@@ -23,7 +23,7 @@ class NauticalMile extends LengthValue {
         LengthUnit.millimeter => Millimeter(value * 1852000),
         LengthUnit.micrometer => Micrometer(value * 1852000000),
         LengthUnit.nanometer => Nanometer(value * 1852000000000),
-        LengthUnit.statueMile => StatueMile(value * 1.15078),
+        LengthUnit.mile => Mile(value * 1.15078),
         LengthUnit.yard => Yard(value * 2025.37),
         LengthUnit.foot => Foot(value * 6076.12),
         LengthUnit.inch => Inch(value * 72913.4),
