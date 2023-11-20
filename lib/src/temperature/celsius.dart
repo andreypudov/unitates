@@ -10,8 +10,8 @@ class Celsius extends TemperatureValue {
   TemperatureValue to(TemperatureUnit unit) =>
       switch(unit) {
         TemperatureUnit.celsius => Celsius(value),
-        TemperatureUnit.fahrenheit => Fahrenheit(value),
-        TemperatureUnit.kelvin => Kelvin(value),
+        TemperatureUnit.fahrenheit => Fahrenheit((value * 9/5) + 32),
+        TemperatureUnit.kelvin => Kelvin(value + 273.15),
       };
 
   @override

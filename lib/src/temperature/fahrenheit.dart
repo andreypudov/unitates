@@ -9,9 +9,9 @@ class Fahrenheit extends TemperatureValue {
   @override
   TemperatureValue to(TemperatureUnit unit) =>
       switch(unit) {
-        TemperatureUnit.celsius => Celsius(value),
+        TemperatureUnit.celsius => Celsius((value - 32) * 5/9),
         TemperatureUnit.fahrenheit => Fahrenheit(value),
-        TemperatureUnit.kelvin => Kelvin(value),
+        TemperatureUnit.kelvin => Kelvin((value - 32) * 5/9 + 273.15),
       };
 
   @override
