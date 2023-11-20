@@ -18,20 +18,20 @@ class MilliSecond extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 1e+6),
+        TimeUnit.microSecond => MicroSecond(value * 1e+3),
         TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.second => Second(value / 1e+3),
+        TimeUnit.minute => Minute(value / 6e+4),
+        TimeUnit.hour => Hour(value / 3.6e+6),
+        TimeUnit.day => Day(value / 8.64e+7),
+        TimeUnit.week => Week(value / 6.048e+8),
+        TimeUnit.month => Month(value / 2.628e+9),
+        TimeUnit.year => Year(value / 3.154e+10),
+        TimeUnit.decade => Decade(value / 3.154e+11),
+        TimeUnit.century => Century(value / 3.154e+12),
       };
 
   @override
-  toString() => '${super.toString()} milli second';
+  toString() => '${super.toString()} ms';
 }

@@ -18,18 +18,18 @@ class Month extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 2.628e+15),
+        TimeUnit.microSecond => MicroSecond(value * 2.628e+12),
+        TimeUnit.milliSecond => MilliSecond(value * 2.628e+9),
+        TimeUnit.second => Second(value * 2.628e+6),
+        TimeUnit.minute => Minute(value * 43800),
+        TimeUnit.hour => Hour(value * 730),
+        TimeUnit.day => Day(value * 30.4166666667),
+        TimeUnit.week => Week(value * 4.3452380952),
         TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.year => Year(value / 12),
+        TimeUnit.decade => Decade(value / 120),
+        TimeUnit.century => Century(value / 1200),
       };
 
   @override

@@ -18,18 +18,18 @@ class Decade extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 3.154e+17),
+        TimeUnit.microSecond => MicroSecond(value * 3.154e+14),
+        TimeUnit.milliSecond => MilliSecond(value * 3.154e+11),
+        TimeUnit.second => Second(value * 3.154e+8),
+        TimeUnit.minute => Minute(value * 5256000),
+        TimeUnit.hour => Hour(value * 87600),
+        TimeUnit.day => Day(value * 3650),
+        TimeUnit.week => Week(value * 521.429),
+        TimeUnit.month => Month(value * 120),
+        TimeUnit.year => Year(value * 10),
         TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.century => Century(value / 10),
       };
 
   @override

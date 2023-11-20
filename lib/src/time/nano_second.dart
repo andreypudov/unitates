@@ -19,19 +19,19 @@ class NanoSecond extends TimeValue {
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
         TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.microSecond => MicroSecond(value / 1e+3),
+        TimeUnit.milliSecond => MilliSecond(value / 1e+6),
+        TimeUnit.second => Second(value / 1e+9),
+        TimeUnit.minute => Minute(value / 6e+10),
+        TimeUnit.hour => Hour(value / 3.6e+12),
+        TimeUnit.day => Day(value / 8.64e+13),
+        TimeUnit.week => Week(value / 6.048e+14),
+        TimeUnit.month => Month(value / 2.628e+15),
+        TimeUnit.year => Year(value / 3.154e+16),
+        TimeUnit.decade => Decade(value / 3.154e+17),
+        TimeUnit.century => Century(value / 3.154e+18),
       };
 
   @override
-  toString() => '${super.toString()} nano second';
+  toString() => '${super.toString()} ns';
 }

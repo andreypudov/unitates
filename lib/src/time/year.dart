@@ -18,18 +18,18 @@ class Year extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 3.154e+16),
+        TimeUnit.microSecond => MicroSecond(value * 3.154e+13),
+        TimeUnit.milliSecond => MilliSecond(value * 3.154e+10),
+        TimeUnit.second => Second(value * 3.154e+7),
+        TimeUnit.minute => Minute(value * 525600),
+        TimeUnit.hour => Hour(value * 8760),
+        TimeUnit.day => Day(value * 365),
+        TimeUnit.week => Week(value * 52.1429),
+        TimeUnit.month => Month(value * 12),
         TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.decade => Decade(value / 10),
+        TimeUnit.century => Century(value / 100),
       };
 
   @override

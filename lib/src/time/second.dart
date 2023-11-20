@@ -18,20 +18,20 @@ class Second extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 1e+9),
+        TimeUnit.microSecond => MicroSecond(value * 1e+6),
+        TimeUnit.milliSecond => MilliSecond(value * 1e+3),
         TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.minute => Minute(value / 60),
+        TimeUnit.hour => Hour(value / 3600),
+        TimeUnit.day => Day(value / 86400),
+        TimeUnit.week => Week(value / 604800),
+        TimeUnit.month => Month(value / 2.628e+6),
+        TimeUnit.year => Year(value / 3.154e+7),
+        TimeUnit.decade => Decade(value / 3.154e+8),
+        TimeUnit.century => Century(value / 3.154e+9),
       };
 
   @override
-  toString() => '${super.toString()} second';
+  toString() => '${super.toString()} s';
 }

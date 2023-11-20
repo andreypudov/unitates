@@ -18,20 +18,20 @@ class Minute extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 6e+10),
+        TimeUnit.microSecond => MicroSecond(value * 6e+7),
+        TimeUnit.milliSecond => MilliSecond(value * 6e+4),
+        TimeUnit.second => Second(value * 60),
         TimeUnit.minute => Minute(value),
-        TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.hour => Hour(value / 60),
+        TimeUnit.day => Day(value / 1440),
+        TimeUnit.week => Week(value / 10080),
+        TimeUnit.month => Month(value / 43800),
+        TimeUnit.year => Year(value / 525600),
+        TimeUnit.decade => Decade(value / 5.256e+6),
+        TimeUnit.century => Century(value / 5.256e+7),
       };
 
   @override
-  toString() => '${super.toString()} minute';
+  toString() => '${super.toString()} min';
 }

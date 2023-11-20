@@ -18,20 +18,20 @@ class Hour extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value),
-        TimeUnit.microSecond => MicroSecond(value),
-        TimeUnit.milliSecond => MilliSecond(value),
-        TimeUnit.second => Second(value),
-        TimeUnit.minute => Minute(value),
+        TimeUnit.nanoSecond => NanoSecond(value * 3.6e+12),
+        TimeUnit.microSecond => MicroSecond(value * 3.6e+9),
+        TimeUnit.milliSecond => MilliSecond(value * 3.6e+6),
+        TimeUnit.second => Second(value * 3600),
+        TimeUnit.minute => Minute(value * 60),
         TimeUnit.hour => Hour(value),
-        TimeUnit.day => Day(value),
-        TimeUnit.week => Week(value),
-        TimeUnit.month => Month(value),
-        TimeUnit.year => Year(value),
-        TimeUnit.decade => Decade(value),
-        TimeUnit.century => Century(value),
+        TimeUnit.day => Day(value / 24),
+        TimeUnit.week => Week(value / 168),
+        TimeUnit.month => Month(value / 730),
+        TimeUnit.year => Year(value / 8760),
+        TimeUnit.decade => Decade(value / 87600),
+        TimeUnit.century => Century(value / 876000),
       };
 
   @override
-  toString() => '${super.toString()} hour';
+  toString() => '${super.toString()} h';
 }
