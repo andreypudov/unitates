@@ -11,11 +11,11 @@ class StandardAtmosphere extends PressureValue {
   @override
   PressureValue to(PressureUnit unit) =>
       switch(unit) {
-        PressureUnit.bar => Bar(value),
-        PressureUnit.pascal => Pascal(value),
-        PressureUnit.poundPerSquareInch => PoundPerSquareInch(value),
+        PressureUnit.bar => Bar(value * 1.01325),
+        PressureUnit.pascal => Pascal(value * 101325),
+        PressureUnit.poundPerSquareInch => PoundPerSquareInch(value * 14.6959487755),
         PressureUnit.standardAtmosphere => StandardAtmosphere(value),
-        PressureUnit.torr => Torr(value),
+        PressureUnit.torr => Torr(value * 759.9999999998),
       };
 
   @override
