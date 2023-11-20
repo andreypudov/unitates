@@ -12,8 +12,8 @@ class Knot extends SpeedValue {
   SpeedValue to(SpeedUnit unit) =>
       switch(unit) {
         SpeedUnit.milePerHour => MilePerHour(value * 1.15078),
-        SpeedUnit.footPerSecond => FootPerSecond(value * 1.68781),
-        SpeedUnit.meterPerSecond => MeterPerSecond(value / 1.94384),
+        SpeedUnit.footPerSecond => FootPerSecond(value * 1.6878098571),
+        SpeedUnit.meterPerSecond => MeterPerSecond(value * 0.5144444444),
         SpeedUnit.kilometerPerHour => KilometerPerHour(value * 1.852),
         SpeedUnit.knot => Knot(value),
       };

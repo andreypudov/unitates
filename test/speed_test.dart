@@ -8,21 +8,21 @@ import 'src/less_precise_or_equals.dart';
 void main() {
   group("should convert correctly", () {
     Map<Speed, List<double>> implementation = {
-      /*                                                    mph                ft/s                 m/s     km/h                  kn */
-      Speed(1, SpeedUnit.milePerHour):      [                 1,            1.46667, 0.4470392589877243, 1.60934,  0.868975825092546],
-      Speed(1, SpeedUnit.footPerSecond):    [0.6818166322349267,                  1, 0.3047999902464003, 1.09728, 0.5924837511331251],
-      Speed(1, SpeedUnit.meterPerSecond):   [           2.23694,            3.28084,                  1,     3.6,            1.94384],
-      Speed(1, SpeedUnit.kilometerPerHour): [0.6213727366498067, 0.9113444152814232, 0.2777777777777778,       1, 0.5399568034557235],
-      Speed(1, SpeedUnit.knot):             [           1.15078,            1.68781, 0.5144456333854638,   1.852,                  1],
+      /*                                              mph          ft/s                 m/s     km/h            kn */
+      Speed(1, SpeedUnit.milePerHour):      [           1, 1.4666666667,            0.44704, 1.60934, 0.8689762419],
+      Speed(1, SpeedUnit.footPerSecond):    [0.6818181818,            1,             0.3048, 1.09728, 0.5924838013],
+      Speed(1, SpeedUnit.meterPerSecond):   [2.2369362921,      3.28084,                  1,     3.6, 1.9438444924],
+      Speed(1, SpeedUnit.kilometerPerHour): [0.6213711922, 0.9113444153, 0.2777777777777778,       1, 0.5399568035],
+      Speed(1, SpeedUnit.knot):             [     1.15078, 1.6878098571,       0.5144444444,   1.852,            1],
     };
 
     Map<Speed, List<double>> requirements = {
-      /*                                                    mph                ft/s                 m/s     km/h                  kn */
-      Speed(1, SpeedUnit.milePerHour):      [                 1,            1.46667,            0.44704, 1.60934,           0.868976],
-      Speed(1, SpeedUnit.footPerSecond):    [          0.681816,                  1,             0.3048, 1.09728,           0.592484],
-      Speed(1, SpeedUnit.meterPerSecond):   [           2.23694,            3.28084,                  1,     3.6,            1.94384],
-      Speed(1, SpeedUnit.kilometerPerHour): [          0.621372,           0.911344,           0.277778,       1,           0.539957],
-      Speed(1, SpeedUnit.knot):             [           1.15078,            1.68781,           0.514445,   1.852,                  1],
+      /*                                              mph          ft/s                 m/s     km/h            kn */
+      Speed(1, SpeedUnit.milePerHour):      [           1,      1.46667,            0.44704, 1.60934,     0.868976],
+      Speed(1, SpeedUnit.footPerSecond):    [    0.681818,            1,             0.3048, 1.09728,     0.592484],
+      Speed(1, SpeedUnit.meterPerSecond):   [     2.23694,      3.28084,                  1,     3.6,      1.94384],
+      Speed(1, SpeedUnit.kilometerPerHour): [    0.621372,     0.911344,           0.277778,       1,     0.539957],
+      Speed(1, SpeedUnit.knot):             [     1.15078,      1.68781,           0.514445,   1.852,            1],
     };
 
     test("should cover supported units", () {
