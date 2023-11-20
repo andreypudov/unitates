@@ -12,11 +12,11 @@ class MeterPerSecond extends SpeedValue {
   @override
   SpeedValue to(SpeedUnit unit) =>
       switch(unit) {
-        SpeedUnit.milePerHour => MilePerHour(value),
-        SpeedUnit.footPerSecond => FootPerSecond(value),
+        SpeedUnit.milePerHour => MilePerHour(value * 2.23694),
+        SpeedUnit.footPerSecond => FootPerSecond(value * 3.28084),
         SpeedUnit.meterPerSecond => MeterPerSecond(value),
-        SpeedUnit.kilometerPerHour => KilometerPerHour(value),
-        SpeedUnit.knot => Knot(value),
+        SpeedUnit.kilometerPerHour => KilometerPerHour(value * 3.6),
+        SpeedUnit.knot => Knot(value * 1.94384),
       };
 
   @override
