@@ -3,6 +3,7 @@ import 'arcsecond.dart';
 import 'degree.dart';
 import 'gradian.dart';
 import 'milliradian.dart';
+import 'plane_angle_conversion_factor.dart';
 import 'plane_angle_value.dart';
 import 'radian.dart';
 
@@ -12,14 +13,14 @@ class MinuteOfArc extends PlaneAngleValue {
   @override
   PlaneAngleValue to(PlaneAngleUnit unit) =>
       switch(unit) {
-        PlaneAngleUnit.arcsecond => Arcsecond(value),
-        PlaneAngleUnit.degree => Degree(value),
-        PlaneAngleUnit.gradian => Gradian(value),
-        PlaneAngleUnit.milliradian => Milliradian(value),
+        PlaneAngleUnit.arcsecond => Arcsecond(value * 60),
+        PlaneAngleUnit.degree => Degree(value / 60),
+        PlaneAngleUnit.gradian => Gradian(value / 54),
+        PlaneAngleUnit.milliradian => Milliradian(value * 1000 * PlaneAngleConversionFactor.minuteOfArcToRadian),
         PlaneAngleUnit.minuteOfArc => MinuteOfArc(value),
-        PlaneAngleUnit.radian => Radian(value),
+        PlaneAngleUnit.radian => Radian(value * PlaneAngleConversionFactor.minuteOfArcToRadian),
       };
 
   @override
-  toString() => '${super.toString()} arcmin';
+  toString() => '${super.toString()} ′';
 }
