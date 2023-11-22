@@ -2,11 +2,11 @@ import '../../time_unit.dart';
 import 'century.dart';
 import 'day.dart';
 import 'decade.dart';
-import 'micro_second.dart';
-import 'milli_second.dart';
+import 'microsecond.dart';
+import 'millisecond.dart';
 import 'minute.dart';
 import 'month.dart';
-import 'nano_second.dart';
+import 'nanosecond.dart';
 import 'second.dart';
 import 'time_value.dart';
 import 'week.dart';
@@ -18,9 +18,9 @@ class Hour extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value * 3.6e+12),
-        TimeUnit.microSecond => MicroSecond(value * 3.6e+9),
-        TimeUnit.milliSecond => MilliSecond(value * 3.6e+6),
+        TimeUnit.nanosecond => Nanosecond(value * 3.6e+12),
+        TimeUnit.microsecond => Microsecond(value * 3.6e+9),
+        TimeUnit.millisecond => Millisecond(value * 3.6e+6),
         TimeUnit.second => Second(value * 3600),
         TimeUnit.minute => Minute(value * 60),
         TimeUnit.hour => Hour(value),

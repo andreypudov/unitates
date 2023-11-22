@@ -11,6 +11,7 @@ import 'imperial_tablespoon.dart';
 import 'imperial_teaspoon.dart';
 import 'liter.dart';
 import 'milliliter.dart';
+import 'us_cup.dart';
 import 'us_fluid_ounce.dart';
 import 'us_legal_cup.dart';
 import 'us_liquid_gallon.dart';
@@ -25,25 +26,26 @@ class UsLiquidQuart extends VolumeValue {
   @override
   VolumeValue to(VolumeUnit unit) =>
       switch(unit) {
-        VolumeUnit.usLiquidGallon => UsLiquidGallon(value),
+        VolumeUnit.usCup => UsCup(value * 4),
+        VolumeUnit.usLiquidGallon => UsLiquidGallon(value * 0.25),
         VolumeUnit.usLiquidQuart => UsLiquidQuart(value),
-        VolumeUnit.usLiquidPint => UsLiquidPint(value),
-        VolumeUnit.usLegalCup => UsLegalCup(value),
-        VolumeUnit.usFluidOunce => UsFluidOunce(value),
-        VolumeUnit.usTablespoon => UsTablespoon(value),
-        VolumeUnit.usTeaspoon => UsTeaspoon(value),
-        VolumeUnit.cubicMeter => CubicMeter(value),
-        VolumeUnit.liter => Liter(value),
-        VolumeUnit.milliliter => Milliliter(value),
-        VolumeUnit.imperialGallon => ImperialGallon(value),
-        VolumeUnit.imperialQuart => ImperialQuart(value),
-        VolumeUnit.imperialPint => ImperialPint(value),
-        VolumeUnit.imperialCup => ImperialCup(value),
-        VolumeUnit.imperialFluidOunce => ImperialFluidOunce(value),
-        VolumeUnit.imperialTablespoon => ImperialTablespoon(value),
-        VolumeUnit.imperialTeaspoon => ImperialTeaspoon(value),
-        VolumeUnit.cubicFoot => CubicFoot(value),
-        VolumeUnit.cubicInch => CubicInch(value),
+        VolumeUnit.usLiquidPint => UsLiquidPint(value * 2),
+        VolumeUnit.usLegalCup => UsLegalCup(value * 4),
+        VolumeUnit.usFluidOunce => UsFluidOunce(value * 32),
+        VolumeUnit.usTablespoon => UsTablespoon(value * 64),
+        VolumeUnit.usTeaspoon => UsTeaspoon(value * 192),
+        VolumeUnit.cubicMeter => CubicMeter(value * 0.000946352946),
+        VolumeUnit.liter => Liter(value * 0.94635294599999),
+        VolumeUnit.milliliter => Milliliter(value * 946.35294599999),
+        VolumeUnit.imperialGallon => ImperialGallon(value * 0.20816855803559),
+        VolumeUnit.imperialQuart => ImperialQuart(value * 0.83267423214235),
+        VolumeUnit.imperialPint => ImperialPint(value * 1.6653484642847),
+        VolumeUnit.imperialCup => ImperialCup(value * 3.3306969285694),
+        VolumeUnit.imperialFluidOunce => ImperialFluidOunce(value * 33.306969285694),
+        VolumeUnit.imperialTablespoon => ImperialTablespoon(value * 53.29115085711),
+        VolumeUnit.imperialTeaspoon => ImperialTeaspoon(value * 159.87345257142),
+        VolumeUnit.cubicFoot => CubicFoot(value * 0.033420140795881),
+        VolumeUnit.cubicInch => CubicInch(value * 57.750003295282),
       };
 
   @override

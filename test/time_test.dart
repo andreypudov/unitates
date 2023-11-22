@@ -9,9 +9,9 @@ void main() {
   group("should convert correctly", () {
     Map<Time, List<double>> implementation = {
       /*                                    ns          μs         ms          s                    min                       h                       d                    week                   month                    year                  decade                century */
-      Time(1, TimeUnit.nanoSecond):  [       1,       1e-3,      1e-6,     1e-9, 1.6666666666666667e-11,  2.777777777777778e-13, 1.1574074074074074e-14, 1.6534391534391534e-15, 3.8051750380517503e-16,  3.170577045022194e-17,  3.170577045022194e-18, 3.170577045022194e-19],
-      Time(1, TimeUnit.microSecond): [    1e+3,          1,      1e-3,     1e-6,  1.6666666666666667e-8, 2.7777777777777777e-10, 1.1574074074074074e-11, 1.6534391534391534e-12, 3.8051750380517506e-13,  3.170577045022194e-14,  3.170577045022194e-15, 3.170577045022194e-16],
-      Time(1, TimeUnit.milliSecond): [    1e+6,       1e+3,         1,     1e-3,  1.6666666666666667e-5,  2.7777777777777776e-7,  1.1574074074074074e-8,  1.6534391534391535e-9, 3.8051750380517503e-10,  3.170577045022194e-11, 3.1705770450221942e-12, 3.170577045022194e-13],
+      Time(1, TimeUnit.nanosecond):  [       1,       1e-3,      1e-6,     1e-9, 1.6666666666666667e-11,  2.777777777777778e-13, 1.1574074074074074e-14, 1.6534391534391534e-15, 3.8051750380517503e-16,  3.170577045022194e-17,  3.170577045022194e-18, 3.170577045022194e-19],
+      Time(1, TimeUnit.microsecond): [    1e+3,          1,      1e-3,     1e-6,  1.6666666666666667e-8, 2.7777777777777777e-10, 1.1574074074074074e-11, 1.6534391534391534e-12, 3.8051750380517506e-13,  3.170577045022194e-14,  3.170577045022194e-15, 3.170577045022194e-16],
+      Time(1, TimeUnit.millisecond): [    1e+6,       1e+3,         1,     1e-3,  1.6666666666666667e-5,  2.7777777777777776e-7,  1.1574074074074074e-8,  1.6534391534391535e-9, 3.8051750380517503e-10,  3.170577045022194e-11, 3.1705770450221942e-12, 3.170577045022194e-13],
       Time(1, TimeUnit.second):      [    1e+9,       1e+6,      1e+3,        1,   0.016666666666666666,  0.0002777777777777778,  1.1574074074074073e-5,  1.6534391534391535e-6,  3.8051750380517503e-7,   3.170577045022194e-8,   3.170577045022194e-9, 3.170577045022194e-10],
       Time(1, TimeUnit.minute):      [   6e+10,       6e+7,      6e+4,       60,                      1,   0.016666666666666666,  0.0006944444444444445,    9.92063492063492e-5,  2.2831050228310503e-5,   1.902587519025875e-6,  1.9025875190258752e-7,  1.902587519025875e-8],
       Time(1, TimeUnit.hour):        [ 3.6e+12,     3.6e+9,    3.6e+6,     3600,                     60,                      1,   0.041666666666666664,   0.005952380952380952,  0.0013698630136986301, 0.00011415525114155251,  1.1415525114155251e-5, 1.1415525114155251e-6],
@@ -25,9 +25,9 @@ void main() {
 
     Map<Time, List<double>> requirements = {
       /*                                    ns          μs         ms          s                    min                       h                       d                    week                   month                    year                  decade                century */
-      Time(1, TimeUnit.nanoSecond):  [       1,       1e-3,      1e-6,     1e-9,              1.6667e-11,            2.7778e-13,             1.1574e-14,             1.6534e-15,             3.8052e-16,              3.171e-17,             3.171e-18,              3.171e-19],
-      Time(1, TimeUnit.microSecond): [    1e+3,          1,      1e-3,     1e-6,               1.6667e-8,            2.7778e-10,             1.1574e-11,             1.6534e-12,             3.8052e-13,              3.171e-14,             3.171e-15,              3.171e-16],
-      Time(1, TimeUnit.milliSecond): [    1e+6,       1e+3,         1,     1e-3,               1.6667e-5,             2.7778e-7,              1.1574e-8,              1.6534e-9,             3.8052e-10,              3.171e-11,             3.171e-12,              3.171e-13],
+      Time(1, TimeUnit.nanosecond):  [       1,       1e-3,      1e-6,     1e-9,              1.6667e-11,            2.7778e-13,             1.1574e-14,             1.6534e-15,             3.8052e-16,              3.171e-17,             3.171e-18,              3.171e-19],
+      Time(1, TimeUnit.microsecond): [    1e+3,          1,      1e-3,     1e-6,               1.6667e-8,            2.7778e-10,             1.1574e-11,             1.6534e-12,             3.8052e-13,              3.171e-14,             3.171e-15,              3.171e-16],
+      Time(1, TimeUnit.millisecond): [    1e+6,       1e+3,         1,     1e-3,               1.6667e-5,             2.7778e-7,              1.1574e-8,              1.6534e-9,             3.8052e-10,              3.171e-11,             3.171e-12,              3.171e-13],
       Time(1, TimeUnit.second):      [    1e+9,       1e+6,      1e+3,        1,               0.0166667,           0.000277778,              1.1574e-5,              1.6534e-6,              3.8052e-7,               3.171e-8,              3.171e-9,              3.171e-10],
       Time(1, TimeUnit.minute):      [    6e+10,      6e+7,      6e+4,       60,                       1,             0.0166667,            0.000694444,              9.9206e-5,              2.2831e-5,              1.9026e-6,             1.9026e-7,              1.9026e-8],
       Time(1, TimeUnit.hour):        [  3.6e+12,    3.6e+9,    3.6e+6,     3600,                      60,                     1,              0.0416667,             0.00595238,             0.00136986,            0.000114155,             1.1416e-5,              1.1416e-6],
@@ -46,9 +46,9 @@ void main() {
 
     implementation.forEach((actual, expected) {
       test("$actual should convert exactly", () {
-        expect(actual.to(TimeUnit.nanoSecond).value, expected[0]);
-        expect(actual.to(TimeUnit.microSecond).value, expected[1]);
-        expect(actual.to(TimeUnit.milliSecond).value, expected[2]);
+        expect(actual.to(TimeUnit.nanosecond).value, expected[0]);
+        expect(actual.to(TimeUnit.microsecond).value, expected[1]);
+        expect(actual.to(TimeUnit.millisecond).value, expected[2]);
         expect(actual.to(TimeUnit.second).value, expected[3]);
         expect(actual.to(TimeUnit.minute).value, expected[4]);
         expect(actual.to(TimeUnit.hour).value, expected[5]);
@@ -63,9 +63,9 @@ void main() {
 
     requirements.forEach((actual, expected) {
       test("$actual should convert closely", () {
-        expect(actual.to(TimeUnit.nanoSecond).value, lessPreciseOrEquals(expected[0]));
-        expect(actual.to(TimeUnit.microSecond).value, lessPreciseOrEquals(expected[1]));
-        expect(actual.to(TimeUnit.milliSecond).value, lessPreciseOrEquals(expected[2]));
+        expect(actual.to(TimeUnit.nanosecond).value, lessPreciseOrEquals(expected[0]));
+        expect(actual.to(TimeUnit.microsecond).value, lessPreciseOrEquals(expected[1]));
+        expect(actual.to(TimeUnit.millisecond).value, lessPreciseOrEquals(expected[2]));
         expect(actual.to(TimeUnit.second).value, lessPreciseOrEquals(expected[3]));
         expect(actual.to(TimeUnit.minute).value, lessPreciseOrEquals(expected[4]));
         expect(actual.to(TimeUnit.hour).value, lessPreciseOrEquals(expected[5]));
@@ -79,9 +79,9 @@ void main() {
     });
 
     test("should use standard symbols", () {
-      expect(Time(1, TimeUnit.nanoSecond).toString(), "1.0 ns");
-      expect(Time(1, TimeUnit.microSecond).toString(), "1.0 μs");
-      expect(Time(1, TimeUnit.milliSecond).toString(), "1.0 ms");
+      expect(Time(1, TimeUnit.nanosecond).toString(), "1.0 ns");
+      expect(Time(1, TimeUnit.microsecond).toString(), "1.0 μs");
+      expect(Time(1, TimeUnit.millisecond).toString(), "1.0 ms");
       expect(Time(1, TimeUnit.second).toString(), "1.0 s");
       expect(Time(1, TimeUnit.minute).toString(), "1.0 min");
       expect(Time(1, TimeUnit.hour).toString(), "1.0 h");

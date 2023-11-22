@@ -1,7 +1,7 @@
 enum TimeUnit {
-  nanoSecond,
-  microSecond,
-  milliSecond,
+  nanosecond,
+  microsecond,
+  millisecond,
   second,
   minute,
   hour,

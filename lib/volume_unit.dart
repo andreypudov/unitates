@@ -1,4 +1,5 @@
 enum VolumeUnit {
+  usCup,
   usLiquidGallon,
   usLiquidQuart,
   usLiquidPint,

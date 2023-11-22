@@ -3,11 +3,11 @@ import 'century.dart';
 import 'day.dart';
 import 'decade.dart';
 import 'hour.dart';
-import 'micro_second.dart';
-import 'milli_second.dart';
+import 'microsecond.dart';
+import 'millisecond.dart';
 import 'minute.dart';
 import 'month.dart';
-import 'nano_second.dart';
+import 'nanosecond.dart';
 import 'second.dart';
 import 'time_value.dart';
 import 'year.dart';
@@ -18,9 +18,9 @@ class Week extends TimeValue {
   @override
   TimeValue to(TimeUnit unit) =>
       switch(unit) {
-        TimeUnit.nanoSecond => NanoSecond(value * 6.048e+14),
-        TimeUnit.microSecond => MicroSecond(value * 6.048e+11),
-        TimeUnit.milliSecond => MilliSecond(value * 6.048e+8),
+        TimeUnit.nanosecond => Nanosecond(value * 6.048e+14),
+        TimeUnit.microsecond => Microsecond(value * 6.048e+11),
+        TimeUnit.millisecond => Millisecond(value * 6.048e+8),
         TimeUnit.second => Second(value * 604800),
         TimeUnit.minute => Minute(value * 10080),
         TimeUnit.hour => Hour(value * 168),

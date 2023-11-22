@@ -11,6 +11,7 @@ import 'imperial_tablespoon.dart';
 import 'imperial_teaspoon.dart';
 import 'liter.dart';
 import 'milliliter.dart';
+import 'us_cup.dart';
 import 'us_fluid_ounce.dart';
 import 'us_legal_cup.dart';
 import 'us_liquid_gallon.dart';
@@ -26,6 +27,7 @@ abstract class VolumeValue {
 
   factory VolumeValue.from(VolumeUnit unit, double value) {
     return switch (unit) {
+      VolumeUnit.usCup => UsCup(value),
       VolumeUnit.usLiquidGallon => UsLiquidGallon(value),
       VolumeUnit.usLiquidQuart => UsLiquidQuart(value),
       VolumeUnit.usLiquidPint => UsLiquidPint(value),

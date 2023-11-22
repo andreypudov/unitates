@@ -3,11 +3,11 @@ import 'century.dart';
 import 'day.dart';
 import 'decade.dart';
 import 'hour.dart';
-import 'micro_second.dart';
-import 'milli_second.dart';
+import 'microsecond.dart';
+import 'millisecond.dart';
 import 'minute.dart';
 import 'month.dart';
-import 'nano_second.dart';
+import 'nanosecond.dart';
 import 'second.dart';
 import 'week.dart';
 import 'year.dart';
@@ -19,9 +19,9 @@ abstract class TimeValue {
 
   factory TimeValue.from(TimeUnit unit, double value) {
     return switch (unit) {
-      TimeUnit.nanoSecond => NanoSecond(value),
-      TimeUnit.microSecond => MicroSecond(value),
-      TimeUnit.milliSecond => MilliSecond(value),
+      TimeUnit.nanosecond => Nanosecond(value),
+      TimeUnit.microsecond => Microsecond(value),
+      TimeUnit.millisecond => Millisecond(value),
       TimeUnit.second => Second(value),
       TimeUnit.minute => Minute(value),
       TimeUnit.hour => Hour(value),

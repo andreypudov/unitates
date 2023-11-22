@@ -1,30 +1,48 @@
-# Unit Conversion
+# Unit Conversion Library
+
+You can use the unit converter to convert from one measurement to another. For example, you could convert from Celsius to Fahrenheit or cups to liters.
 
 ## Features
 
-List what your package can do. Maybe include images, gifs, or videos.
+### Conversions you can do
 
-## Getting started
+- Area
+- Data transfer rate
+- Digital storage
+- Energy
+- Frequency
+- Fuel consumption
+- Length
+- Mass
+- Plane angle
+- Pressure
+- Speed
+- Temperature
+- Time
+- Volume
 
-List prerequisites and provide or point to information on how to
-start using the package.
+### Units you can convert between
+
+| Type of measurement | Available units                                                                                                                                                                                                                                                                                         |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Area                | square kilometer, square meter, square mile, square yard, square foot, square inch, hectare, acre                                                                                                                                                                                                       |
+| Data transfer rate  |                                                                                                                                                                                                                                                                                                         | 
+| Digital storage     |                                                                                                                                                                                                                                                                                                         | 
+| Energy              |                                                                                                                                                                                                                                                                                                         | 
+| Frequency           |                                                                                                                                                                                                                                                                                                         | 
+| Fuel consumption    |                                                                                                                                                                                                                                                                                                         | 
+| Length              | kilometer, meter, centimeter, millimeter, micrometer, nanometer, mile, yard, foot, inch, nautical mile                                                                                                                                                                                                  | 
+| Mass                |                                                                                                                                                                                                                                                                                                         | 
+| Plane angle         | arcsecond, degree, gradian, milliradian, minute of arc, radian                                                                                                                                                                                                                                          | 
+| Pressure            | bar, pascal, pound per square inch, standard atmosphere, torr                                                                                                                                                                                                                                           | 
+| Speed               | mile per hour, foot per second, meter per second, kilometer per hour, knot                                                                                                                                                                                                                              | 
+| Temperature         | celsius, fahrenheit, kelvin                                                                                                                                                                                                                                                                             | 
+| Time                | nanosecond, microsecond, millisecond, second, minute, hour, day, week, month, year, decade, century                                                                                                                                                                                                     | 
+| Volume              | us cup, us liquid gallon, us liquid quart, us liquid pint, us legal cup, us fluid ounce, us tablespoon, us teaspoon, cubic meter, liter, milliliter, imperial gallon, imperial quart, imperial pint, imperial cup, imperial fluid ounce, imperial tablespoon, imperial teaspoon, cubic foot, cubic inch | 
 
 ## Usage
-
-Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
 
 ```dart
 const length = Length(1, LengthUnit.meter);
 const lengthInFeet = length.to(LengthUnit.foot);
 ```
-
-## Additional information
-
-Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
