@@ -12,6 +12,7 @@ void main() {
     expect(0.00002539998628400741, lessPreciseOrEquals(2.54e-5));
     expect(0.000013714900141812068, lessPreciseOrEquals(1.3715e-5));
     expect(0.5399568034557235, lessPreciseOrEquals(0.539957));
+    expect(28349523.125, lessPreciseOrEquals(2.835e+7));
   });
 
   test("should mismatch", () {
