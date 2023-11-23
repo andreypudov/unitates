@@ -17,15 +17,15 @@ class MetricTon extends MassValue {
   MassValue to(MassUnit unit) =>
       switch(unit) {
         MassUnit.metricTon => MetricTon(value),
-        MassUnit.kilogram => Kilogram(value),
-        MassUnit.gram => Gram(value),
-        MassUnit.milligram => Milligram(value),
-        MassUnit.microgram => Microgram(value),
-        MassUnit.imperialTon => ImperialTon(value),
-        MassUnit.usTon => UsTon(value),
-        MassUnit.stone => Stone(value),
-        MassUnit.pound => Pound(value),
-        MassUnit.ounce => Ounce(value),
+        MassUnit.kilogram => Kilogram(value * 1e+3),
+        MassUnit.gram => Gram(value * 1e+6),
+        MassUnit.milligram => Milligram(value * 1e+9),
+        MassUnit.microgram => Microgram(value * 1e+12),
+        MassUnit.imperialTon => ImperialTon(value * 0.98420652761106),
+        MassUnit.usTon => UsTon(value * 1.1023113109244),
+        MassUnit.stone => Stone(value * 157.47304441777),
+        MassUnit.pound => Pound(value * 2204.6226218488),
+        MassUnit.ounce => Ounce(value * 35273.96194958),
       };
 
   @override

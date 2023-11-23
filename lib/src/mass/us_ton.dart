@@ -16,18 +16,18 @@ class UsTon extends MassValue {
   @override
   MassValue to(MassUnit unit) =>
       switch(unit) {
-        MassUnit.metricTon => MetricTon(value),
-        MassUnit.kilogram => Kilogram(value),
-        MassUnit.gram => Gram(value),
-        MassUnit.milligram => Milligram(value),
-        MassUnit.microgram => Microgram(value),
-        MassUnit.imperialTon => ImperialTon(value),
+        MassUnit.metricTon => MetricTon(value * 0.90718474),
+        MassUnit.kilogram => Kilogram(value * 907.18474),
+        MassUnit.gram => Gram(value * 907184.74),
+        MassUnit.milligram => Milligram(value * 907184740),
+        MassUnit.microgram => Microgram(value * 9.0718474e+11),
+        MassUnit.imperialTon => ImperialTon(value * 0.89285714285714),
         MassUnit.usTon => UsTon(value),
-        MassUnit.stone => Stone(value),
-        MassUnit.pound => Pound(value),
-        MassUnit.ounce => Ounce(value),
+        MassUnit.stone => Stone(value * 142.85714285714),
+        MassUnit.pound => Pound(value * 2000),
+        MassUnit.ounce => Ounce(value * 32000),
       };
 
   @override
-  toString() => '${super.toString()} us_ton';
+  toString() => '${super.toString()} tn';
 }

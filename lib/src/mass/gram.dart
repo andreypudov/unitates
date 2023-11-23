@@ -16,16 +16,16 @@ class Gram extends MassValue {
   @override
   MassValue to(MassUnit unit) =>
       switch(unit) {
-        MassUnit.metricTon => MetricTon(value),
-        MassUnit.kilogram => Kilogram(value),
+        MassUnit.metricTon => MetricTon(value * 1e-6),
+        MassUnit.kilogram => Kilogram(value * 0.001),
         MassUnit.gram => Gram(value),
-        MassUnit.milligram => Milligram(value),
-        MassUnit.microgram => Microgram(value),
-        MassUnit.imperialTon => ImperialTon(value),
-        MassUnit.usTon => UsTon(value),
-        MassUnit.stone => Stone(value),
-        MassUnit.pound => Pound(value),
-        MassUnit.ounce => Ounce(value),
+        MassUnit.milligram => Milligram(value * 1000),
+        MassUnit.microgram => Microgram(value * 1e+6),
+        MassUnit.imperialTon => ImperialTon(value * 9.8420652761106e-7),
+        MassUnit.usTon => UsTon(value * 1.1023113109244e-6),
+        MassUnit.stone => Stone(value * 0.00015747304441777),
+        MassUnit.pound => Pound(value * 0.0022046226218488),
+        MassUnit.ounce => Ounce(value * 0.03527396194958),
       };
 
   @override

@@ -16,16 +16,16 @@ class Pound extends MassValue {
   @override
   MassValue to(MassUnit unit) =>
       switch(unit) {
-        MassUnit.metricTon => MetricTon(value),
-        MassUnit.kilogram => Kilogram(value),
-        MassUnit.gram => Gram(value),
-        MassUnit.milligram => Milligram(value),
-        MassUnit.microgram => Microgram(value),
-        MassUnit.imperialTon => ImperialTon(value),
-        MassUnit.usTon => UsTon(value),
-        MassUnit.stone => Stone(value),
+        MassUnit.metricTon => MetricTon(value * 4.5359237e-4),
+        MassUnit.kilogram => Kilogram(value * 0.45359237),
+        MassUnit.gram => Gram(value * 453.59237),
+        MassUnit.milligram => Milligram(value * 453592.37),
+        MassUnit.microgram => Microgram(value * 4.5359237e+8),
+        MassUnit.imperialTon => ImperialTon(value * 4.4642857142857e-4),
+        MassUnit.usTon => UsTon(value * 0.0005),
+        MassUnit.stone => Stone(value * 0.071428571428571),
         MassUnit.pound => Pound(value),
-        MassUnit.ounce => Ounce(value),
+        MassUnit.ounce => Ounce(value * 16),
       };
 
   @override

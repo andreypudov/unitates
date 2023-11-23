@@ -16,16 +16,16 @@ class Stone extends MassValue {
   @override
   MassValue to(MassUnit unit) =>
       switch(unit) {
-        MassUnit.metricTon => MetricTon(value),
-        MassUnit.kilogram => Kilogram(value),
-        MassUnit.gram => Gram(value),
-        MassUnit.milligram => Milligram(value),
-        MassUnit.microgram => Microgram(value),
-        MassUnit.imperialTon => ImperialTon(value),
-        MassUnit.usTon => UsTon(value),
+        MassUnit.metricTon => MetricTon(value * 0.00635029318),
+        MassUnit.kilogram => Kilogram(value * 6.35029318),
+        MassUnit.gram => Gram(value * 6350.29318),
+        MassUnit.milligram => Milligram(value * 6.35029318e+6),
+        MassUnit.microgram => Microgram(value * 6.35029318e+9),
+        MassUnit.imperialTon => ImperialTon(value * 0.00625),
+        MassUnit.usTon => UsTon(value * 0.007),
         MassUnit.stone => Stone(value),
-        MassUnit.pound => Pound(value),
-        MassUnit.ounce => Ounce(value),
+        MassUnit.pound => Pound(value * 14),
+        MassUnit.ounce => Ounce(value * 224),
       };
 
   @override
