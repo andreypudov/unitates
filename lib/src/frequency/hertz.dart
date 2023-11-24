@@ -11,9 +11,9 @@ class Hertz extends FrequencyValue {
   FrequencyValue to(FrequencyUnit unit) =>
       switch(unit) {
         FrequencyUnit.hertz => Hertz(value),
-        FrequencyUnit.kilohertz => Kilohertz(value),
-        FrequencyUnit.megahertz => Megahertz(value),
-        FrequencyUnit.gigahertz => Gigahertz(value),
+        FrequencyUnit.kilohertz => Kilohertz(value * 1e-3),
+        FrequencyUnit.megahertz => Megahertz(value * 1e-6),
+        FrequencyUnit.gigahertz => Gigahertz(value * 1e-9),
       };
 
   @override
