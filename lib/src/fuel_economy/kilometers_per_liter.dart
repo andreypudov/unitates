@@ -10,10 +10,10 @@ class KilometersPerLiter extends FuelEconomyValue {
   @override
   FuelEconomyValue to(FuelEconomyUnit unit) =>
       switch(unit) {
-        FuelEconomyUnit.milesPerGallon => MilesPerGallon(value),
-        FuelEconomyUnit.milesPerGallonImperial => MilesPerGallonImperial(value),
+        FuelEconomyUnit.milesPerGallon => MilesPerGallon(value * 2.3521442146661),
+        FuelEconomyUnit.milesPerGallonImperial => MilesPerGallonImperial(value * 2.8248108789117),
         FuelEconomyUnit.kilometersPerLiter => KilometersPerLiter(value),
-        FuelEconomyUnit.litersPer100Kilometers => LitersPer100Kilometers(value),
+        FuelEconomyUnit.litersPer100Kilometers => LitersPer100Kilometers(value * 100),
       };
 
   @override
