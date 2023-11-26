@@ -17,15 +17,15 @@ class Joule extends EnergyValue {
   EnergyValue to(EnergyUnit unit) =>
       switch(unit) {
         EnergyUnit.joule => Joule(value),
-        EnergyUnit.kilojoule => Kilojoule(value),
-        EnergyUnit.gramCalorie => GramCalorie(value),
-        EnergyUnit.kilocalorie => Kilocalorie(value),
-        EnergyUnit.wattHour => WattHour(value),
-        EnergyUnit.kilowattHour => KilowattHour(value),
-        EnergyUnit.electronvolt => Electronvolt(value),
-        EnergyUnit.britishThermalUnit => BritishThermalUnit(value),
-        EnergyUnit.usTherm => UsTherm(value),
-        EnergyUnit.footPound => FootPound(value),
+        EnergyUnit.kilojoule => Kilojoule(value * 0.001),
+        EnergyUnit.gramCalorie => GramCalorie(value * 0.23900573613767),
+        EnergyUnit.kilocalorie => Kilocalorie(value * 0.00023900573613767),
+        EnergyUnit.wattHour => WattHour(value * 0.00027777777777778),
+        EnergyUnit.kilowattHour => KilowattHour(value * 2.7777777777778e-7),
+        EnergyUnit.electronvolt => Electronvolt(value * 6.2415093432602e+18),
+        EnergyUnit.britishThermalUnit => BritishThermalUnit(value * 0.00094781712031332),
+        EnergyUnit.usTherm => UsTherm(value * 9.4804342797335e-9),
+        EnergyUnit.footPound => FootPound(value * 0.73756214927727),
       };
 
   @override
