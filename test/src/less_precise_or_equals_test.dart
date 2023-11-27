@@ -19,5 +19,7 @@ void main() {
 
   test("should mismatch", () {
     expect(1.25, isNot(lessPreciseOrEquals(1.1)));
+    expect(1e-12, isNot(lessPreciseOrEquals(1e-9)));
+    expect(1.1102e-16, isNot(lessPreciseOrEquals(1.25e-16)));
   });
 }

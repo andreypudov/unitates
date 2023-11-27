@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import '../../digital_storage_unit.dart';
 import 'bit.dart';
 import 'byte.dart';
@@ -28,30 +30,30 @@ class Pebibit extends DigitalStorageValue {
   @override
   DigitalStorageValue to(DigitalStorageUnit unit) =>
       switch(unit) {
-        DigitalStorageUnit.bit => Bit(value),
-        DigitalStorageUnit.kilobit => Kilobit(value),
-        DigitalStorageUnit.kibibit => Kibibit(value),
-        DigitalStorageUnit.megabit => Megabit(value),
-        DigitalStorageUnit.mebibit => Mebibit(value),
-        DigitalStorageUnit.gigabit => Gigabit(value),
-        DigitalStorageUnit.gibibit => Gibibit(value),
-        DigitalStorageUnit.terabit => Terabit(value),
-        DigitalStorageUnit.tebibit => Tebibit(value),
-        DigitalStorageUnit.petabit => Petabit(value),
+        DigitalStorageUnit.bit => Bit(value * pow(1024, 5)),
+        DigitalStorageUnit.kilobit => Kilobit(value * pow(1024, 5) / 1000),
+        DigitalStorageUnit.kibibit => Kibibit(value * pow(1024, 4)),
+        DigitalStorageUnit.megabit => Megabit(value * pow(1024, 5) / pow(1000, 2)),
+        DigitalStorageUnit.mebibit => Mebibit(value * pow(1024, 3)),
+        DigitalStorageUnit.gigabit => Gigabit(value * pow(1024, 5) / pow(1000, 3)),
+        DigitalStorageUnit.gibibit => Gibibit(value * pow(1024, 2)),
+        DigitalStorageUnit.terabit => Terabit(value * pow(1024, 5) / pow(1000, 4)),
+        DigitalStorageUnit.tebibit => Tebibit(value * 1024),
+        DigitalStorageUnit.petabit => Petabit(value * pow(1024, 5) / pow(1000, 5)),
         DigitalStorageUnit.pebibit => Pebibit(value),
-        DigitalStorageUnit.byte => Byte(value),
-        DigitalStorageUnit.kilobyte => Kilobyte(value),
-        DigitalStorageUnit.kibibyte => Kibibyte(value),
-        DigitalStorageUnit.megabyte => Megabyte(value),
-        DigitalStorageUnit.mebibyte => Mebibyte(value),
-        DigitalStorageUnit.gigabyte => Gigabyte(value),
-        DigitalStorageUnit.gibibyte => Gibibyte(value),
-        DigitalStorageUnit.terabyte => Terabyte(value),
-        DigitalStorageUnit.tebibyte => Tebibyte(value),
-        DigitalStorageUnit.petabyte => Petabyte(value),
-        DigitalStorageUnit.pebibyte => Pebibyte(value),
+        DigitalStorageUnit.byte => Byte(value * pow(1024, 5) / 8),
+        DigitalStorageUnit.kilobyte => Kilobyte(value * pow(1024, 5) / (8 * 1000)),
+        DigitalStorageUnit.kibibyte => Kibibyte(value * pow(1024, 4) / 8),
+        DigitalStorageUnit.megabyte => Megabyte(value * pow(1024, 5) / (8 * pow(1000, 2))),
+        DigitalStorageUnit.mebibyte => Mebibyte(value * pow(1024, 3) / 8),
+        DigitalStorageUnit.gigabyte => Gigabyte(value * pow(1024, 5) / (8 * pow(1000, 3))),
+        DigitalStorageUnit.gibibyte => Gibibyte(value * pow(1024, 2) / 8),
+        DigitalStorageUnit.terabyte => Terabyte(value * pow(1024, 5) / (8 * pow(1000, 4))),
+        DigitalStorageUnit.tebibyte => Tebibyte(value * 1024 / 8),
+        DigitalStorageUnit.petabyte => Petabyte(value * pow(1024, 5) / (8 * pow(1000, 5))),
+        DigitalStorageUnit.pebibyte => Pebibyte(value / 8),
       };
 
   @override
-  toString() => '${super.toString()} PiB';
+  toString() => '${super.toString()} Pibit';
 }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import '../../digital_storage_unit.dart';
 import 'bit.dart';
 import 'byte.dart';
@@ -27,28 +29,28 @@ class Kibibit extends DigitalStorageValue {
   @override
   DigitalStorageValue to(DigitalStorageUnit unit) =>
       switch(unit) {
-        DigitalStorageUnit.bit => Bit(value),
-        DigitalStorageUnit.kilobit => Kilobit(value),
+        DigitalStorageUnit.bit => Bit(value * 1024),
+        DigitalStorageUnit.kilobit => Kilobit(value * 1024 / 1000),
         DigitalStorageUnit.kibibit => Kibibit(value),
-        DigitalStorageUnit.megabit => Megabit(value),
-        DigitalStorageUnit.mebibit => Mebibit(value),
-        DigitalStorageUnit.gigabit => Gigabit(value),
-        DigitalStorageUnit.gibibit => Gibibit(value),
-        DigitalStorageUnit.terabit => Terabit(value),
-        DigitalStorageUnit.tebibit => Tebibit(value),
-        DigitalStorageUnit.petabit => Petabit(value),
-        DigitalStorageUnit.pebibit => Pebibit(value),
-        DigitalStorageUnit.byte => Byte(value),
-        DigitalStorageUnit.kilobyte => Kilobyte(value),
-        DigitalStorageUnit.kibibyte => Kibibyte(value),
-        DigitalStorageUnit.megabyte => Megabyte(value),
-        DigitalStorageUnit.mebibyte => Mebibyte(value),
-        DigitalStorageUnit.gigabyte => Gigabyte(value),
-        DigitalStorageUnit.gibibyte => Gibibyte(value),
-        DigitalStorageUnit.terabyte => Terabyte(value),
-        DigitalStorageUnit.tebibyte => Tebibyte(value),
-        DigitalStorageUnit.petabyte => Petabyte(value),
-        DigitalStorageUnit.pebibyte => Pebibyte(value),
+        DigitalStorageUnit.megabit => Megabit(value * 1024 / pow(1000, 2)),
+        DigitalStorageUnit.mebibit => Mebibit(value / 1024),
+        DigitalStorageUnit.gigabit => Gigabit(value * 1024 / pow(1000, 3)),
+        DigitalStorageUnit.gibibit => Gibibit(value / pow(1024, 2)),
+        DigitalStorageUnit.terabit => Terabit(value * 1024 / pow(1000, 4)),
+        DigitalStorageUnit.tebibit => Tebibit(value / pow(1024, 3)),
+        DigitalStorageUnit.petabit => Petabit(value * 1024 / pow(1000, 5)),
+        DigitalStorageUnit.pebibit => Pebibit(value / pow(1024, 4)),
+        DigitalStorageUnit.byte => Byte(value * 1024 / 8),
+        DigitalStorageUnit.kilobyte => Kilobyte(value * 1024 / (8 * 1000)),
+        DigitalStorageUnit.kibibyte => Kibibyte(value / 8),
+        DigitalStorageUnit.megabyte => Megabyte(value * 1024 / (8 * pow(1000, 2))),
+        DigitalStorageUnit.mebibyte => Mebibyte(value / (8 * 1024)),
+        DigitalStorageUnit.gigabyte => Gigabyte(value * 1024 / (8 * pow(1000, 3))),
+        DigitalStorageUnit.gibibyte => Gibibyte(value / (8 * pow(1024, 2))),
+        DigitalStorageUnit.terabyte => Terabyte(value * 1024 / (8 * pow(1000, 4))),
+        DigitalStorageUnit.tebibyte => Tebibyte(value / (8 * pow(1024, 3))),
+        DigitalStorageUnit.petabyte => Petabyte(value * 1024 / (8 * pow(1000, 5))),
+        DigitalStorageUnit.pebibyte => Pebibyte(value / (8 * pow(1024, 4))),
       };
 
   @override
