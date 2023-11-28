@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import '../../data_transfer_rate_unit.dart';
 import 'bit_per_second.dart';
 import 'data_transfer_rate_value.dart';
@@ -22,16 +24,16 @@ class KilobitPerSecond extends DataTransferRateValue {
         DataTransferRateUnit.bitPerSecond => BitPerSecond(value * 1000),
         DataTransferRateUnit.kilobitPerSecond => KilobitPerSecond(value),
         DataTransferRateUnit.kilobytePerSecond => KilobytePerSecond(value / 8),
-        DataTransferRateUnit.kibibitPerSecond => KibibitPerSecond(value / 1.024),
+        DataTransferRateUnit.kibibitPerSecond => KibibitPerSecond(value * 1000 / 1024),
         DataTransferRateUnit.megabitPerSecond => MegabitPerSecond(value / 1000),
-        DataTransferRateUnit.megabytePerSecond => MegabytePerSecond(value / 8000),
-        DataTransferRateUnit.mebibitPerSecond => MebibitPerSecond(value / 1049),
-        DataTransferRateUnit.gigabitPerSecond => GigabitPerSecond(value / 1e+6),
-        DataTransferRateUnit.gigabytePerSecond => GigabytePerSecond(value / 8e+6),
-        DataTransferRateUnit.gibibitPerSecond => GibibitPerSecond(value / 1.074e+6),
-        DataTransferRateUnit.terabitPerSecond => TerabitPerSecond(value / 1e+9),
-        DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value / 8e+9),
-        DataTransferRateUnit.tebibitPerSecond => TebibitPerSecond(value / 1.1e+9),
+        DataTransferRateUnit.megabytePerSecond => MegabytePerSecond(value / (8 * 1000)),
+        DataTransferRateUnit.mebibitPerSecond => MebibitPerSecond(value * 1000 / pow(1024, 2)),
+        DataTransferRateUnit.gigabitPerSecond => GigabitPerSecond(value / pow(1000, 2)),
+        DataTransferRateUnit.gigabytePerSecond => GigabytePerSecond(value / (8 * pow(1000, 2))),
+        DataTransferRateUnit.gibibitPerSecond => GibibitPerSecond(value * 1000 / pow(1024, 3)),
+        DataTransferRateUnit.terabitPerSecond => TerabitPerSecond(value / pow(1000, 3)),
+        DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value / (8 * pow(1000, 3))),
+        DataTransferRateUnit.tebibitPerSecond => TebibitPerSecond(value * 1000 / pow(1024, 4)),
       };
 
   @override

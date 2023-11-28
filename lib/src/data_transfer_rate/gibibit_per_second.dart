@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import '../../data_transfer_rate_unit.dart';
 import 'bit_per_second.dart';
 import 'data_transfer_rate_value.dart';
@@ -20,18 +22,18 @@ class GibibitPerSecond extends DataTransferRateValue {
   @override
   DataTransferRateValue to(DataTransferRateUnit unit) =>
       switch(unit) {
-        DataTransferRateUnit.bitPerSecond => BitPerSecond(value * 1.074e+9),
-        DataTransferRateUnit.kilobitPerSecond => KilobitPerSecond(value * 1.074e+6),
-        DataTransferRateUnit.kilobytePerSecond => KilobytePerSecond(value * 134200),
-        DataTransferRateUnit.kibibitPerSecond => KibibitPerSecond(value * 1.049e+6),
-        DataTransferRateUnit.megabitPerSecond => MegabitPerSecond(value * 1074),
-        DataTransferRateUnit.megabytePerSecond => MegabytePerSecond(value * 134.2),
+        DataTransferRateUnit.bitPerSecond => BitPerSecond(value * pow(1024, 3)),
+        DataTransferRateUnit.kilobitPerSecond => KilobitPerSecond(value * pow(1024, 3) / 1000),
+        DataTransferRateUnit.kilobytePerSecond => KilobytePerSecond(value * pow(1024, 3) / (8 * 1000)),
+        DataTransferRateUnit.kibibitPerSecond => KibibitPerSecond(value * pow(1024, 2)),
+        DataTransferRateUnit.megabitPerSecond => MegabitPerSecond(value * pow(1024, 3) / pow(1000, 2)),
+        DataTransferRateUnit.megabytePerSecond => MegabytePerSecond(value * pow(1024, 3) / (8 * pow(1000, 2))),
         DataTransferRateUnit.mebibitPerSecond => MebibitPerSecond(value * 1024),
-        DataTransferRateUnit.gigabitPerSecond => GigabitPerSecond(value * 1.074),
-        DataTransferRateUnit.gigabytePerSecond => GigabytePerSecond(value / 7.451),
+        DataTransferRateUnit.gigabitPerSecond => GigabitPerSecond(value * pow(1024, 3) / pow(1000, 3)),
+        DataTransferRateUnit.gigabytePerSecond => GigabytePerSecond(value * pow(1024, 3) / (8 * pow(1000, 3))),
         DataTransferRateUnit.gibibitPerSecond => GibibitPerSecond(value),
-        DataTransferRateUnit.terabitPerSecond => TerabitPerSecond(value / 931.3),
-        DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value / 7451),
+        DataTransferRateUnit.terabitPerSecond => TerabitPerSecond(value * pow(1024, 3) / pow(1000, 4)),
+        DataTransferRateUnit.terabytePerSecond => TerabytePerSecond(value * pow(1024, 3) / (8 * pow(1000, 4))),
         DataTransferRateUnit.tebibitPerSecond => TebibitPerSecond(value / 1024),
       };
 
