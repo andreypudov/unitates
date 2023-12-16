@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/frequency.dart';
-import 'package:units/frequency_unit.dart';
+import 'package:unitates/frequency.dart';
+import 'package:unitates/frequency_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

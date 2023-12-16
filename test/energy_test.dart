@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/energy.dart';
-import 'package:units/energy_unit.dart';
+import 'package:unitates/energy.dart';
+import 'package:unitates/energy_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

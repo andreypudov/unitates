@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/digital_storage.dart';
-import 'package:units/digital_storage_unit.dart';
+import 'package:unitates/digital_storage.dart';
+import 'package:unitates/digital_storage_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

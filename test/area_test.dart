@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/area.dart';
-import 'package:units/area_unit.dart';
+import 'package:unitates/area.dart';
+import 'package:unitates/area_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

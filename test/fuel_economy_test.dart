@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/fuel_economy.dart';
-import 'package:units/fuel_economy_unit.dart';
+import 'package:unitates/fuel_economy.dart';
+import 'package:unitates/fuel_economy_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

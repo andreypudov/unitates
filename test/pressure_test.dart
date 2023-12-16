@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/pressure.dart';
-import 'package:units/pressure_unit.dart';
+import 'package:unitates/pressure.dart';
+import 'package:unitates/pressure_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

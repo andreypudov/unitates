@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/plane_angle.dart';
-import 'package:units/plane_angle_unit.dart';
+import 'package:unitates/plane_angle.dart';
+import 'package:unitates/plane_angle_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/volume.dart';
-import 'package:units/volume_unit.dart';
+import 'package:unitates/volume.dart';
+import 'package:unitates/volume_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

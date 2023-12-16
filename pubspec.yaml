@@ -1,7 +1,7 @@
-name: units
+name: unitates
 description: Unit Conversion Library.
 version: 0.0.1
-repository: https://github.com/andreypudov/units
+repository: https://github.com/andreypudov/unitates
 
 environment:
   sdk: '>=3.1.5 <4.0.0'

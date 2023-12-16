@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/temperature.dart';
-import 'package:units/temperature_unit.dart';
+import 'package:unitates/temperature.dart';
+import 'package:unitates/temperature_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

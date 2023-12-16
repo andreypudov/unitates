@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/speed.dart';
-import 'package:units/speed_unit.dart';
+import 'package:unitates/speed.dart';
+import 'package:unitates/speed_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

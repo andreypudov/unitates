@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/time.dart';
-import 'package:units/time_unit.dart';
+import 'package:unitates/time.dart';
+import 'package:unitates/time_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

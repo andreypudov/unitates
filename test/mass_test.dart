@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/mass.dart';
-import 'package:units/mass_unit.dart';
+import 'package:unitates/mass.dart';
+import 'package:unitates/mass_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 

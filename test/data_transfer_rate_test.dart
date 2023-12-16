@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:units/data_transfer_rate.dart';
-import 'package:units/data_transfer_rate_unit.dart';
+import 'package:unitates/data_transfer_rate.dart';
+import 'package:unitates/data_transfer_rate_unit.dart';
 
 import 'src/less_precise_or_equals.dart';
 
